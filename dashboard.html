@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Quản Trị</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card-bg: #1a1d27;
+    --card-hover: #232735;
+    --border: #2a2e3a;
+    --text: #e6e8ec;
+    --text-muted: #8b8fa3;
+    --accent: #4f8cff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  header p {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(79, 140, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .card-url {
+    font-size: 12px;
+    color: var(--text-muted);
+    word-break: break-all;
+  }
+  .card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🖥️ Dashboard Quản Trị</h1>
+      <p>Danh sách các website quản lý</p>
+    </header>
+
+    <div class="grid">
+      <a href="https://website1.com" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Website 1</div>
+        <div class="card-url">https://website1.com</div>
+        <div class="card-status"><span class="dot"></span> Đang hoạt động</div>
+      </a>
+
+      <a href="https://website2.com" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Website 2</div>
+        <div class="card-url">https://website2.com</div>
+        <div class="card-status"><span class="dot"></span> Đang hoạt động</div>
+      </a>
+
+      <a href="https://website3.com" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Website 3</div>
+        <div class="card-url">https://website3.com</div>
+        <div class="card-status"><span class="dot"></span> Đang hoạt động</div>
+      </a>
+
+      <a href="https://website4.com" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Website 4</div>
+        <div class="card-url">https://website4.com</div>
+        <div class="card-status"><span class="dot"></span> Đang hoạt động</div>
+      </a>
+
+      <a href="https://website5.com" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Website 5</div>
+        <div class="card-url">https://website5.com</div>
+        <div class="card-status"><span class="dot"></span> Đang hoạt động</div>
+      </a>
+    </div>
+
+    <footer>
+      Cập nhật lần cuối: <span id="update-time"></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('update-time').textContent = new Date().toLocaleString('vi-VN');
+  </script>
+</body>
+</html>
