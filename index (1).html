@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Quản Trị</title>
+<style>
+  :root {
+    --bg: #003580;
+    --bg-gradient: linear-gradient(160deg, #00449e 0%, #003580 55%, #00215e 100%);
+    --card-bg: #ffffff;
+    --card-hover: #fff5f5;
+    --border: #b3c6e0;
+    --text: #e4002b;
+    --text-muted: #a80020;
+    --accent: #e4002b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  header p {
+    color: #dce6f5;
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(0, 33, 94, 0.2);
+  }
+  .card:hover {
+    background: var(--card-hover);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 33, 94, 0.35);
+  }
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #e8edf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .card-url {
+    font-size: 12px;
+    color: var(--text-muted);
+    word-break: break-all;
+  }
+  .card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #e4002b;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #dce6f5;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dashboard Quản Trị</h1>
+      <p>Danh sách các website quản lý</p>
+    </header>
+
+    <div class="grid">
+      <a href="https://github.com/vtb600/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">GITHUB VIETINBANK600</div>
+        <div class="card-url">trang github vietinbank600</div>
+        <div class="card-status"><span class="dot"></span> https://github.com/vtb600/</div>
+      </a>
+      
+      <a href="https://vtb600.github.io/ico/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">CREAT ICON</div>
+        <div class="card-url">tạo file .ico để build app python</div>
+        <div class="card-status"><span class="dot"></span> https://vtb600.github.io/ico/</div>
+      </a>
+
+      <a href="https://vtb600.github.io/vhdn/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">WEBSITE VHDN</div>
+        <div class="card-url">website VHDN CN600</div>
+        <div class="card-status"><span class="dot"></span> https://vtb600.github.io/vhdn/</div>
+      </a>
+
+      <a href="https://vtb600.github.io/pdf/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">GHÉP/TÁCH/XOÁ PDF</div>
+        <div class="card-url">ghép - tách - xoá pdf online</div>
+        <div class="card-status"><span class="dot"></span> https://vtb.github.io/pdf/</div>
+      </a>
+
+      <a href="https://n8n.vtb600.website/form/pdf" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">CHUYỂN PDF SANG XLSX</div>
+        <div class="card-url">direct sang n8n chuyển pdf sang xlsx</div>
+        <div class="card-status"><span class="dot"></span> https://n8n.vtb600.website/form/pdf</div>
+      </a>
+
+      <a href="https://vtb600.github.io/kpi/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">KPI DASHBOARD</div>
+        <div class="card-url">theo dõi kpi cn600</div>
+        <div class="card-status"><span class="dot"></span> https://vtb600.github.io/kpi/</div>
+      </a>
+
+      <a href="https://n8n.vtb600.website/form/hoadon/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">LẤY FILE XML</div>
+        <div class="card-url">lấy xml chuyển về mail vietinbank</div>
+        <div class="card-status"><span class="dot"></span> https://n8n.vtb600.website/form/hoadon/</div>
+      </a>
+
+      <a href="https://n8n.vtb600.website/form/thunhap/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">NHẬN FILE THU NHẬP 2025</div>
+        <div class="card-url">lấy thu nhập 2025 về mail vietinbank</div>
+        <div class="card-status"><span class="dot"></span> https://n8n.vtb600.website/form/thunhap/</div>
+      </a>
+
+      <a href="https://n8n.vtb600.website/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">N8N DOCKER</div>
+        <div class="card-url">n8n dockerdesktop laptop work</div>
+        <div class="card-status"><span class="dot"></span> https://n8n.vtb600.website/</div>
+      </a>
+      
+      <a href="https://ubt.vtb600.website/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">N8N UBUNTU</div>
+        <div class="card-url">n8n ubuntuserver</div>
+        <div class="card-status"><span class="dot"></span> https://ubt.vtb600.website/</div>
+      </a>
+
+      <a href="https://filebrowser.cn600.website/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">FILE BROWSER</div>
+        <div class="card-url">file browser</div>
+        <div class="card-status"><span class="dot"></span> https://filebrowser.cn600.website/</div>
+      </a>
+      
+      <a href="https://ubt.vtb600.website/webhook/hoanung/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">XỬ LÝ HOÁ ĐƠN TIẾP KHÁCH</div>
+        <div class="card-url">chạy workflow hoá đơn tiếp khác</div>
+        <div class="card-status"><span class="dot"></span> https://ubt.vtb600.website/webhook/hoanung/</div>
+      </a>
+      
+      <a href="https://vtb600.github.io/lx600/" target="_blank" class="card">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">LX600v2</div>
+        <div class="card-url">báo cáo xăng xe</div>
+        <div class="card-status"><span class="dot"></span> https://vtb600.github.io/lx600/</div>
+      </a>
+    </div>
+
+    <footer>
+      Cập nhật lần cuối: <span id="update-time"></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('update-time').textContent = new Date().toLocaleString('vi-VN');
+  </script>
+</body>
+</html>
